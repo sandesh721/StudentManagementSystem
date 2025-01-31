@@ -1,0 +1,84 @@
+.dashboard-container {
+    background-color: #f0f0f0; 
+    width: 98.5vw;
+    height: 100vh;
+    padding-top: 10%;
+   
+  }
+  .student-info h2{
+    flex-basis: 100%;
+  }
+  .buttons button{
+    display: inline-block;
+    flex-basis: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .student-info {
+    
+    background-color: white; 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px; 
+    width: 80%; 
+    max-width: 800px; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    gap: 20px;
+    justify-content: space-between;
+    
+  }
+  
+  .student-info label {
+    font-size: 14px;
+    margin-bottom: 5px;
+    display: block;
+  }
+  
+  .student-info input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .student-info .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+  }
+  
+  .student-info .form-row div {
+    width: 48%; 
+    margin-left: 6vw;
+  }
+  
+  .buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .save-btn,
+  .edit-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  
+  .save-btn:hover,
+  .edit-btn:hover {
+    background-color: #0056b3;
+  }
+  
