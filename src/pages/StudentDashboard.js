@@ -5,6 +5,8 @@ import { auth, db } from "../firebase";
 import "../CSS/StudentDashboard.css"; 
 import { useNavigate } from "react-router-dom";
 import Navbar from "../components/Navbar";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const StudentDashboard = () => {
   const [student, setStudent] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
@@ -17,8 +19,8 @@ const fetchStudentData = async () => {
   try {
     const user = auth.currentUser;
     if (!user) {
-      alert("No user logged in!");
-    //   navigate("/login")
+      toast.error("No user logged in!");
+      navigate("/login")
       return;
     }
 
@@ -31,10 +33,11 @@ const fetchStudentData = async () => {
       setStudent(studentDoc.data());
       setUpdatedStudent(studentDoc.data()); 
     } else {
-      console.log("No student data found!");
+      toast.error("No student data found!");
+      navigate("/login")
     }
   } catch (error) {
-    console.error("Error fetching student data:", error);
+    toast.error("Error fetching student data:", error);
   }
 };
 
@@ -54,25 +57,26 @@ const fetchStudentData = async () => {
     try {
         const user = auth.currentUser;
         if (!user) {
-          alert("No user logged in!");
+          toast.error("No user logged in!");
+          navigate("/login")
           return;
         }
     
         const studentsRef = collection(db, "students");
-        const q = query(studentsRef, where("uid", "==", user.uid)); // Query document where uid matches
+        const q = query(studentsRef, where("uid", "==", user.uid)); 
         const querySnapshot = await getDocs(q);
     
         if (!querySnapshot.empty) {
-          const studentDoc = querySnapshot.docs[0]; // Get first matching document
-          const docRef = doc(db, "students", studentDoc.id); // Use Firestore-generated ID
+          const studentDoc = querySnapshot.docs[0]; 
+          const docRef = doc(db, "students", studentDoc.id); 
     
           await updateDoc(docRef, updatedStudent);
-          alert("Student data updated successfully!");
+          toast.success("Student data updated successfully!");
         } else {
-          console.log("No student document found for this user.");
+          toast.error("No student document found for this user.");
         }
       } catch (error) {
-        console.error("Error updating student data:", error);
+        toast.error("Error updating student data:", error);
       }
   };
 
@@ -156,6 +160,7 @@ const fetchStudentData = async () => {
       </div>
 
     </div>
+    <ToastContainer autoClose={2000} />
     </div>
   );
 };

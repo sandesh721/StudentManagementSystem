@@ -28,6 +28,9 @@ const Login = () => {
   const handleRegisterRedirect = () => {
     navigate("/register"); 
   };
+  const handleForgotPasswordRedirect = ()=>{
+    navigate("/forgotpassword")
+  }
   const handleChange = (e) => {
     setCredentials({ ...credentials, [e.target.name]: e.target.value });
   };
@@ -85,6 +88,9 @@ const Login = () => {
         Create an account?{" "}
         <span style={{ color: "blue", cursor: "pointer" }} onClick={handleRegisterRedirect}>
           Register here
+        </span>
+        <span style={{ color: "blue", cursor: "pointer" }} onClick={handleForgotPasswordRedirect}>
+          ForgotPassword?
         </span>
       </p>
       </div>

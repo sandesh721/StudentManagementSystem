@@ -12,14 +12,14 @@ const handleHome = () =>{
   const handleLogout = async () => {
     try {
       await auth.signOut();
-      navigate("/login"); // Redirect to login after logout
+      navigate("/login"); 
     } catch (error) {
       console.error("Logout Error:", error.message);
     }
   };
 
-  // Conditionally render logout button based on current route
-  const showLogoutButton = !(location.pathname === "/login" || location.pathname === "/register");
+  
+  const showLogoutButton = !(location.pathname === "/login" || location.pathname === "/register" || location.pathname === "/forgotpassword");
 
   return (
     <nav className="navbar">
