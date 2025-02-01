@@ -1,7 +1,7 @@
 # Student Management System
 ## Project direct link
 ```bash
-  [git clone https://github.com/sandesh721/StudentManagementSystem/](https://student-management-system-lac.vercel.app/)
+  https://student-management-system-lac.vercel.app/
 ```
 ## Environment Variables
 
