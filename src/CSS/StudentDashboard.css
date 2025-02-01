@@ -2,11 +2,14 @@
     background-color: #f0f0f0; 
     width: 98.5vw;
     height: 100vh;
-    padding-top: 10%;
-   
+    /* padding-top: 10%; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .student-info h2{
     flex-basis: 100%;
+    text-align: center;
   }
   .buttons button{
     display: inline-block;
@@ -81,4 +84,34 @@
   .edit-btn:hover {
     background-color: #0056b3;
   }
-  
+
+
+  @media screen and (max-width: 768px) {
+    .form-row {
+       flex-wrap: wrap;
+       gap: 10px;
+    }
+    
+    .student-info{
+        margin-top: 40%;
+    }
+    .form-row div {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .student-info {
+        width: 90%;
+        padding: 15px;
+    }
+    
+    .student-info h2 {
+        font-size: 20px;
+    }
+
+    .save-btn,
+    .edit-btn {
+        width: 100%;
+    }
+}

@@ -19,8 +19,7 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    min-width: 300px;
+    width: 90%;
     max-width: 400px;
     text-align: center;
   }
@@ -66,3 +65,28 @@ body {
     background-color: #45a049;
   }
   
+
+  @media screen and (max-width: 768px) {
+    .login-container {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-container {
+        width: 85%;
+        padding: 20px;
+        margin-left: 10px;
+        margin-right: 20px;
+    }
+    
+    .input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

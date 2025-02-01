@@ -89,7 +89,7 @@ const Login = () => {
         <span style={{ color: "blue", cursor: "pointer" }} onClick={handleRegisterRedirect}>
           Register here
         </span>
-        <span style={{ color: "blue", cursor: "pointer" }} onClick={handleForgotPasswordRedirect}>
+        <span style={{ color: "blue", cursor: "pointer", marginLeft:"25px" }} onClick={handleForgotPasswordRedirect}>
           ForgotPassword?
         </span>
       </p>
