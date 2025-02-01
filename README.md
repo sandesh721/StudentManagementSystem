@@ -1,4 +1,8 @@
 # Student Management System
+## Project direct link
+```bash
+  [git clone https://github.com/sandesh721/StudentManagementSystem/](https://student-management-system-lac.vercel.app/)
+```
 ## Environment Variables
 
 To run this project, you will need to have Firebase account.
